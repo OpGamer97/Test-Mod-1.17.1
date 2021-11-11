@@ -1,5 +1,6 @@
 package com.opgamer.testingmod;
 
+import com.opgamer.testingmod.item.ModItems;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -28,12 +29,15 @@ public class TestingMod {
 
     public TestingMod() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModItems.register(eventBus);
+
         eventBus.addListener(this::setup);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
     }
-    // comment
+
     private void setup(final FMLCommonSetupEvent event)
     {
         // some preinit code
