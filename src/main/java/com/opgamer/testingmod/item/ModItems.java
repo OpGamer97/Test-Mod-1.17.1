@@ -21,6 +21,12 @@ public class ModItems {
     public static final RegistryObject<Item> RAW_TITANIUM = ITEMS.register("raw_titanium",
             () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
+public static final RegistryObject<Item> SHIT = ITEMS.register("shit",
+            () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+
+public static final RegistryObject<Item> GIGGLE = ITEMS.register("giggle",
+            () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
